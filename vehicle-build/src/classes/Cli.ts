@@ -395,6 +395,10 @@ class Cli {
         // TODO: add statements to perform the tow action only if the selected vehicle is a truck. Call the findVehicleToTow method to find a vehicle to tow and pass the selected truck as an argument. After calling the findVehicleToTow method, you will need to return to avoid instantly calling the performActions method again since findVehicleToTow is asynchronous.
         if (answers.vehicleType === 'Truck') {
           this.findVehicleToTow(truck);
+          return;
+        }
+        else if (answers.vehicleType === 'Motorbike') {
+          this.performActions('Perform a Wheelie');
         }
         // TODO: add statements to perform the wheelie action only if the selected vehicle is a motorbike
         else if (answers.action === 'Select or create another vehicle') {

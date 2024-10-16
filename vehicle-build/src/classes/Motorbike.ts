@@ -1,20 +1,9 @@
 // Importing Vehicle and Wheel classes
 import Vehicle from './Vehicle.js';
 import Wheel from './Wheel.js';
-/*answers.color,
-answers.make,
-answers.model,
-answers.frontWheelBrand.
-answers.rearWheelBrand,
-parseInt(answers.year),
-parseInt(answers.weight),
-parseInt(answers.topSpeed),
-parseInt(answers.frontWheelDiameter),
-parseInt(answers.rearWheelDiameter),
-[]*/
 
 // TODO: The Motorbike class should extend the Vehicle class
-class Motorbike extend Vehicle { 
+class Motorbike extends Vehicle { 
   vin: string;
   color: string;
   make: string;
@@ -25,14 +14,14 @@ class Motorbike extend Vehicle {
   wheels: Wheel[];
 
   constructor(
-    vin: string;
-  color: string;
-  make: string;
-  model: string;
-  year: number;
-  weight: number;
-  topSpeed: number;
-  wheels: Wheel[];
+    vin: string,
+  color: string,
+  make: string,
+  model: string,
+  year: number,
+  weight: number,
+  topSpeed: number,
+  wheels: Wheel[],
   )
   {
   super(); 
@@ -53,7 +42,7 @@ if (wheels.length !== 2) {
   this.wheels = wheels;
 }
   };
-  wheelie() {
+  wheelie(): void {
     console.log(`Motorbike ${this.make} ${this.model} is doing a wheelie!`)
   }
 
@@ -85,6 +74,7 @@ if (wheels.length !== 2) {
 
   // TODO: Implement the wheelie method
     // TODO: The method should log the message "Motorbike [make] [model] is doing a wheelie!"
+  
 
   // TODO: Override the printDetails method from the Vehicle class
   // TODO: The method should call the printDetails method of the parent class
